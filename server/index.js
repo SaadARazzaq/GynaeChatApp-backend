@@ -7,7 +7,8 @@ const cookiesParser = require('cookie-parser');
 const { app, server } = require('./socket/index');
 
 app.use(cors({
-  origin: 'https://gynae-chat-app-frontend-11.vercel.app',
+  // origin: 'https://gynae-chat-app-frontend-11.vercel.app',
+  origin: '*',
   credentials: true
 }));
 app.use(express.json());
