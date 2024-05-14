@@ -9,13 +9,14 @@ const getConversation = require('../helpers/getConversation')
 const app = express()
 
 /***socket connection */
-const server = http.createServer(app)
-const io = new Server(server,{
-    cors : {
-        origin : process.env.FRONTEND_URL,
-        credentials : true
-    }
-})
+const server = http.createServer(app);
+const io = new Server(server, {
+  cors: {
+    origin: 'https://gynae-chat-app-frontend-11.vercel.app',
+    credentials: true
+  }
+});
+
 
 /***
  * socket running at http://localhost:8080/
